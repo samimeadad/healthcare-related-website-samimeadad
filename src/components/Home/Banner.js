@@ -23,7 +23,7 @@ const Banner = () => {
                         <div className="mt-4 px-5 text-start rounded-3">
                             <Form>
                                 <h3 className="text-info fw-bold">Book An Appointment</h3>
-                                <p className="text-success"><small>Contact us to kick start your journey towards joyous parenthood</small></p>
+                                <p className="text-secondary"><small>Contact us to kick start your journey towards joyous parenthood</small></p>
                                 <FormControl
                                     type="text"
                                     placeholder="Name"
