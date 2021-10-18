@@ -44,8 +44,8 @@ const Header = () => {
 
                     {/* login and signup section */ }
                     <Nav className="p-3">
-                        <Button variant="outline-dark" className="me-3">Join for Free</Button>
-                        <NavLink className="mt-1 text-dark text-decoration-none" to="/login">Login</NavLink>
+                        <NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink>
+                        <NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
