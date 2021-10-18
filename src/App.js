@@ -2,15 +2,19 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import About from './components/About/About';
-import Treatment from './components/Treatment/Treatment';
+import Treatments from './components/Treatments/Treatments';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Doctors from './components/Doctors/Doctors';
 
 function App () {
   return (
     <div>
       <Router>
+        <Header></Header>
         <Switch>
           <Route exact path="/home">
             <Home></Home>
@@ -21,8 +25,11 @@ function App () {
           <Route exact path="/about">
             <About></About>
           </Route>
-          <Route exact path="/services">
-            <Treatment></Treatment>
+          <Route exact path="/treatments">
+            <Treatments></Treatments>
+          </Route>
+          <Route exact path="/doctors">
+            <Doctors></Doctors>
           </Route>
           <Route exact path="/login">
             <Login></Login>
@@ -34,6 +41,7 @@ function App () {
             <ErrorPage></ErrorPage>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );

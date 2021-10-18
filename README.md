@@ -12,4 +12,4 @@
 
 5. DreamBaby is a family friendly medical center addressing all infertility needs and offering medical and psycho-social support throughout the journey.
 
-6. The site is responsive for mobile and tablet as well. Please stay with us and find your Dream Baby from DreamBaby. Stay touched. Thank you.
+6. The site is responsive for mobile and tablet as well. Please stay with us to find your long awaited Dream Baby from DreamBaby. Stay touched. Thank you.
