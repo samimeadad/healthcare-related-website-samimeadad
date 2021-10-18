@@ -12,12 +12,12 @@ const Treatment = ( props ) => {
                 <img src={ image } className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title fw-bold text-primary">{ name }</h5>
-                    <p className="card-text">{ description.slice( 0, 200 ) }</p>
+                    <p className="card-text">{ description.slice( 0, 150 ) }</p>
                     <p className="card-text"><b>Doctor:</b> { specialist }</p>
                     <h3 className="card-text fw-bold">Cost: Tk.{ price }</h3>
                 </div>
                 <div>
-                    <Button className="w-100 me-3">Details</Button>
+                    <Button className="w-100">Details</Button>
                 </div>
             </div>
         </Col>

@@ -1,14 +1,23 @@
 import React from 'react';
 import Achievements from './Achievements';
+import Angels from './Angels';
 import Banner from './Banner';
+import PremiumDoctors from './PremiumDoctors';
+import PremiumTreatments from './PremiumTreatments';
 
 const Home = () => {
     return (
         <div>
             <Banner />
-            <hr className="text-danger m-5" />
+            <hr className="text-info m-5" />
             <Achievements />
-            <hr className="text-danger m-5" />
+            <hr className="text-info m-5" />
+            <PremiumTreatments />
+            <hr className="text-info m-5" />
+            <PremiumDoctors />
+            <hr className="text-info m-5" />
+            <Angels></Angels>
+            <hr className="text-info m-5" />
         </div >
     );
 };
