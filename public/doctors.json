@@ -1,83 +1,56 @@
 [
     {
         "id": 101,
-        "name": "Jhankar Mahbub",
-        "age": 32,
-        "country": "Bangladesh",
-        "students": "584,484",
+        "name": "Dr. GAUTAM. B. HANJI",
+        "age": 54,
+        "degree": "M.B.B.S., D.G.O., DNB",
+        "designation": "Medical Director",
         "premium": true,
-        "image": "https://pbs.twimg.com/profile_images/500020424864849920/taW8OsLp_400x400.jpeg"
+        "image": "https://chennaifertilitycenter.com/assets/images/Dr-GH.jpg"
     },
     {
         "id": 102,
-        "name": "Andrei Neagoie",
-        "age": 27,
-        "country": "Canada",
-        "students": "432,253",
+        "name": "Dr. Smisha Sridev",
+        "age": 38,
+        "degree": "M.B.B.S., DGO., DNB, FNB",
+        "designation": "Consultant and Course Director for Reproductive Medicine",
         "premium": true,
-        "image": "https://pbs.twimg.com/profile_images/1077192318397108226/SOdG5r1f.jpg"
+        "image": "https://chennaifertilitycenter.com/assets/images/Dr.Smisha-Sridev.jpg"
     },
     {
         "id": 103,
-        "name": "Stephane Maarek",
-        "age": 26,
-        "country": "Norway",
-        "students": "350,500",
-        "premium": false,
-        "image": "https://pbs.twimg.com/profile_images/1217791989560872965/z3wNmDjD_400x400.jpg"
+        "name": "Dr. Chitra Ramanathan",
+        "age": 54,
+        "degree": "M.B.B.S., MRCOG., CCT(UK)., DFFP",
+        "designation": "Endoscopic Surgeon",
+        "premium": true,
+        "image": "https://chennaifertilitycenter.com/assets/images/chitra.jpg"
     },
     {
         "id": 104,
-        "name": "Jonas Schmedtmann",
-        "age": 29,
-        "country": "Bangladesh",
-        "students": "277,000",
+        "name": "Dr. Harshini Jayakumar",
+        "age": 28,
+        "degree": "M.B.B.S",
+        "designation": "Consultant Obstetrician",
         "premium": false,
-        "image": "https://avatars.githubusercontent.com/u/18718850?v=4"
+        "image": "https://chennaifertilitycenter.com/assets/images/Dr.Harshini.jpg"
     },
     {
         "id": 105,
-        "name": "Mumshad Mannambeth",
-        "age": 28,
-        "country": "India",
-        "students": "123,545",
+        "name": "Dr. Hajira Anjum Ara",
+        "age": 31,
+        "degree": "M.B.B.S., D.G.O., DNB",
+        "designation": "Sonologist",
         "premium": false,
-        "image": "https://avatars.githubusercontent.com/u/2704615?v=4"
+        "image": "https://chennaifertilitycenter.com/assets/images/DR.-HAJIRA.jpg"
     },
     {
         "id": 106,
-        "name": "Zaid Sabih",
-        "age": 27,
-        "country": "Ireland",
-        "students": "312,775",
-        "premium": true,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/91K-l4hLFJL._SX450_.jpg"
-    },
-    {
-        "id": 107,
-        "name": "Stephen Grider",
-        "age": 30,
-        "country": "Sweden",
-        "students": "278,990",
+        "name": "Dr. K. Hari Prasad",
+        "age": 34,
+        "degree": "M.B.B.S., MD.",
+        "designation": "Anesthesiologist",
         "premium": false,
-        "image": "https://yt3.ggpht.com/ytc/AKedOLRkWB6cfn5D9MA2RfKDOLro_mLX-C-t8359OeA=s900-c-k-c0x00ffffff-no-rj"
-    },
-    {
-        "id": 108,
-        "name": "Jose Portilla",
-        "age": 32,
-        "country": "USA",
-        "students": "230,120",
-        "premium": false,
-        "image": "https://everipedia-storage.s3.amazonaws.com/ProfilePicture/lang_en/jose-portilla/mainphoto_medium.webp"
-    },
-    {
-        "id": 109,
-        "name": "David Bombal",
-        "age": 55,
-        "country": "USA",
-        "students": "455,230",
-        "premium": false,
-        "image": "https://avatars.githubusercontent.com/u/22679022?v=4"
+        "image": "https://chennaifertilitycenter.com/assets/images/Dr.hariprasad.jpg"
     }
 ]
