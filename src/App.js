@@ -9,6 +9,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Doctors from './components/Doctors/Doctors';
+import Contact from './components/Contact/Contact';
 
 function App () {
   return (
@@ -30,6 +31,9 @@ function App () {
           </Route>
           <Route exact path="/doctors">
             <Doctors></Doctors>
+          </Route>
+          <Route exact path="/contact">
+            <Contact></Contact>
           </Route>
           <Route exact path="/login">
             <Login></Login>
