@@ -8,8 +8,6 @@ import useAuth from '../../Hooks/useAuth';
 
 const Header = () => {
     const { user, logout } = useAuth();
-    console.log( user );
-
     return (
         <header className="header">
             <Navbar collapseOnSelect expand="lg" className="nav navbar px-3" bg="info" variant="dark">
@@ -48,7 +46,7 @@ const Header = () => {
                     <Nav className="p-3">
                         {
                             !user.email ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :
-                                <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log Out <span className="fw-bold text-danger">{ user?.email }</span></button>
+                                <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log out: <span className="fw-bold text-danger">{ user?.email }</span></button>
                         }
                     </Nav>
                 </Navbar.Collapse>

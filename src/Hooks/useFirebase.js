@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import initializeFirebaseAuthentication from '../Firebase/firebase.init';
 
 initializeFirebaseAuthentication();
@@ -34,23 +34,12 @@ const useFirebase = () => {
             } );
     }
 
-    const setUserName = () => {
-        updateProfile( auth.currentUser, { displayName: "Sami Meadad Choudhury" } )
-            .then( () => {
-                setUser( user );
-            } )
-            .catch( error => {
-                setError( error );
-            } );
-    }
-
     const registerNewUser = ( email, password ) => {
         createUserWithEmailAndPassword( auth, email, password )
             .then( result => {
                 setUser( result.user );
                 setError( 'Yeah! User Registered' );
                 verifyEmail();
-                setUserName();
             } )
             .catch( error => {
                 setError( error.message );
@@ -109,7 +98,6 @@ const useFirebase = () => {
         registerNewUser,
         processLogin,
         processPasswordReset,
-        setUserName,
         logout,
         isLoading
     }

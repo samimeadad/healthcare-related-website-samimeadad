@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
-// custom hook for courses api call
+// custom hook for treatments/services api call
 const useTreatments = () => {
     const [ treatments, setTreatments ] = useState( [] );
 
     useEffect( () => {
-        fetch( './treatments.json' )
+        fetch( '/treatments.json' )
             .then( res => res.json() )
             .then( data => setTreatments( data ) );
     }, [] );
 
-    //return courses state variable and setCourses function
+    //return treatments/services state variable and setTreatments function
     return [ treatments, setTreatments ];
 }
 

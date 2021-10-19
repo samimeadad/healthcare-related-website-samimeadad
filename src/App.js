@@ -30,15 +30,15 @@ function App () {
             <Route exact path="/about">
               <About></About>
             </Route>
-            <Route exact path="/treatments">
+            <PrivateRoute exact path="/treatments">
               <Treatments></Treatments>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute exact path="/treatment/:treatmentId">
               <PrivateSingleTreatment></PrivateSingleTreatment>
             </PrivateRoute>
-            <Route exact path="/doctors">
+            <PrivateRoute exact path="/doctors">
               <Doctors></Doctors>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/contact">
               <Contact></Contact>
             </Route>
