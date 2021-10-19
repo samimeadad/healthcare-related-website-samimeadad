@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 // component for Treatments to be displayed on the Treatment page
 const Treatment = ( props ) => {
-    const { name, specialist, description, price, image } = props.treatment;
+    const { id, name, specialist, description, price, image } = props.treatment;
     return (
         // div for each column
         <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 }>
@@ -17,7 +18,7 @@ const Treatment = ( props ) => {
                     <h3 className="card-text fw-bold">Cost: Tk.{ price }</h3>
                 </div>
                 <div>
-                    <Button className="w-100">Details</Button>
+                    <Link to={ `/PrivateSingleTreatment/${ id }` }><Button className="btn btn-primary">Details</Button></Link>
                 </div>
             </div>
         </Col>

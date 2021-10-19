@@ -46,8 +46,8 @@ const Header = () => {
                     {/* login and signup section */ }
                     <Nav className="p-3">
                         {
-                            !user.displayName ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :
-                                <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log Out <span className="fw-bold text-danger">{ user.displayName }</span></button>
+                            !user?.email ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :
+                                <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log Out <span className="fw-bold text-danger">{ user?.email }</span></button>
                         }
                     </Nav>
                 </Navbar.Collapse>

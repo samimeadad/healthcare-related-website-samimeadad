@@ -7,18 +7,21 @@ initializeFirebaseAuthentication();
 const useFirebase = () => {
     const [ user, setUser ] = useState( {} );
     const [ error, setError ] = useState( '' );
+    const [ isLoading, setIsLoading ] = useState( true );
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
     const signInUsingGoogle = () => {
+        setIsLoading( true );
         signInWithPopup( auth, googleProvider )
             .then( result => {
                 setUser( result.user );
             } )
             .catch( error => {
                 setError( error.message );
-            } );
+            } )
+            .finally( () => setIsLoading( false ) );
     }
 
     const verifyEmail = () => {
@@ -61,23 +64,29 @@ const useFirebase = () => {
             } );
     }
 
+    useEffect( () => {
+        onAuthStateChanged( auth, user => {
+            if ( user ) {
+                setUser( user );
+            }
+            else {
+                setUser( {} );
+            }
+            setIsLoading( false );
+        } );
+    }, [] );
+
     const logout = () => {
+        setIsLoading( true );
         signOut( auth ).then( () => {
             setUser( {} );
             setError( 'User Logged Out!' )
         } )
             .catch( ( error ) => {
                 setError( error.message );
-            } );
+            } )
+            .finally( () => setIsLoading( false ) );
     }
-
-    useEffect( () => {
-        onAuthStateChanged( auth, user => {
-            if ( user ) {
-                setUser( user );
-            }
-        } )
-    }, [ auth ] );
 
     return {
         user,
@@ -86,7 +95,8 @@ const useFirebase = () => {
         registerNewUser,
         processLogin,
         processPasswordReset,
-        logout
+        logout,
+        isLoading
     }
 }
 

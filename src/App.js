@@ -11,6 +11,8 @@ import Footer from './components/Footer/Footer';
 import Doctors from './components/Doctors/Doctors';
 import Contact from './components/Contact/Contact';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PrivateSingleTreatment from './components/Treatment/PrivateSingleTreatment';
 
 function App () {
   return (

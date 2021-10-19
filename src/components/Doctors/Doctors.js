@@ -5,7 +5,6 @@ import Doctor from '../Doctor/Doctor';
 
 const Doctors = () => {
     const [ doctors ] = useDoctors();
-    console.log( doctors );
     return (
         <Row className="container mx-auto my-5">
             <h2 className="mt-5 text-center fw-bold">Our Teams</h2>
