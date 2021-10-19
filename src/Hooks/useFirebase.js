@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import initializeFirebaseAuthentication from '../Firebase/firebase.init';
 
 initializeFirebaseAuthentication();
@@ -9,7 +9,6 @@ const useFirebase = () => {
     const [ error, setError ] = useState( '' );
 
     const auth = getAuth();
-
     const googleProvider = new GoogleAuthProvider();
 
     const signInUsingGoogle = () => {
@@ -22,9 +21,40 @@ const useFirebase = () => {
             } );
     }
 
+    const verifyEmail = () => {
+        sendEmailVerification( auth.currentUser )
+            .then( result => {
+                console.log( result );
+            } )
+    }
+
+    const registerNewUser = ( email, password ) => {
+        createUserWithEmailAndPassword( auth, email, password )
+            .then( result => {
+                setUser( result.user );
+                setError( 'Yeah! User Registered' );
+                verifyEmail();
+            } )
+            .catch( error => {
+                setError( error.message );
+            } );
+    }
+
+    const processLogin = ( email, password ) => {
+        signInWithEmailAndPassword( auth, email, password )
+            .then( result => {
+                setError( '' );
+                setUser( result.user );
+            } )
+            .catch( error => {
+                setError( error.message );
+            } );
+    }
+
     const logout = () => {
         signOut( auth ).then( () => {
             setUser( {} );
+            setError( 'User Logged Out!' )
         } )
             .catch( ( error ) => {
                 setError( error.message );
@@ -34,7 +64,6 @@ const useFirebase = () => {
     useEffect( () => {
         onAuthStateChanged( auth, user => {
             if ( user ) {
-                console.log( 'inside state change', user );
                 setUser( user );
             }
         } )
@@ -44,6 +73,8 @@ const useFirebase = () => {
         user,
         error,
         signInUsingGoogle,
+        registerNewUser,
+        processLogin,
         logout
     }
 }
