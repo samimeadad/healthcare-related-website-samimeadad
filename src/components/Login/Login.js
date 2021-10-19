@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import loginImage from '../../images/login.jpg';
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
 import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
@@ -67,13 +67,15 @@ const Login = () => {
 
     const handleRegister = e => {
         e.preventDefault();
-        if ( password.length < 6 ) {
-            setError( 'Password must be at least 6 characters long' );
+        if ( !email ) {
+            setError( 'Please input a valid email!' );
             return;
         }
-
-        else if ( !/(?=.*[A-Z].*[A-Z])/.test( password ) ) {
-            setError( 'Ensure string has two uppercase letters' );
+        else if ( !password ) {
+            setError( 'Please input your password' );
+        }
+        else if ( password.length < 6 ) {
+            setError( 'Password must be at least 6 characters long' );
             return;
         }
 
@@ -87,37 +89,39 @@ const Login = () => {
     }
 
     const handleResetPassword = () => {
-        sendPasswordResetEmail( auth, email )
-            .then( result => {
-                setError( 'Password reset mail sent' );
-            } )
+        if ( !email ) {
+            setError( 'Please input a valid email' );
+        }
+        else {
+            sendPasswordResetEmail( auth, email )
+                .then( result => {
+                    setError( 'Password reset mail sent' );
+                } )
+        }
     }
 
     return (
         <div className="container mx-auto my-5">
             <Row className="text-center">
                 <Col xs={ 12 } sm={ 12 } md={ 6 } lg={ 6 }>
-                    <div className="container mt-5">
+                    <div className="container mt-5 pt-5">
                         <form onSubmit={ handleRegister }>
-                            <h3 className="text-primary">Please { isLogin ? 'Login' : 'Register' }</h3>
+                            <h3 className="text-primary fw-bold">Please { isLogin ? 'Login' : 'Register' }</h3>
                             {
                                 !isLogin && <div className="row mb-3">
-                                    <label htmlFor="inputAddress" className="col-sm-2 col-form-label">Name</label>
-                                    <div className="col-sm-10">
+                                    <div className="col-sm-12">
                                         <input onBlur={ nameInputFieldChange } type="text" className="form-control" placeholder="Your Name" />
                                     </div>
                                 </div>
                             }
                             <div className="row mb-3">
-                                <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
-                                <div className="col-sm-10">
-                                    <input onBlur={ emailInputFieldChange } type="email" className="form-control" id="inputEmail3" required />
+                                <div className="col-sm-12">
+                                    <input onBlur={ emailInputFieldChange } type="email" className="form-control" id="inputEmail3" placeholder="Email" required />
                                 </div>
                             </div>
                             <div className="row mb-3">
-                                <label htmlFor="inputPassword3" className="col-sm-2 col-form-label" required>Password</label>
-                                <div className="col-sm-10">
-                                    <input onBlur={ passwordInputFieldChange } type="password" className="form-control" id="inputPassword3" />
+                                <div className="col-sm-12">
+                                    <input onBlur={ passwordInputFieldChange } type="password" className="form-control" id="inputPassword3" placeholder="Password (Minimum 6 Characters)" required />
                                 </div>
                             </div><div className="row mb-3">
                                 <div className="col-sm-10 offset-sm-2">
