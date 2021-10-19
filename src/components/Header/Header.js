@@ -47,12 +47,12 @@ const Header = () => {
                     <Nav className="p-3">
                         {
                             !user.email ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :
-                                <span><button className="btn btn-info border border-danger me-2" onClick={ logout }>Log Out <span className="fw-bold text-danger">{ user.displayName }</span></button></span>
+                                <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log Out <span className="fw-bold text-danger">{ user.displayName }</span></button>
                         }
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </header>
+        </header >
     );
 };
 
