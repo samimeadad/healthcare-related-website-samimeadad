@@ -18,7 +18,7 @@ const Treatment = ( props ) => {
                     <h3 className="card-text fw-bold">Cost: Tk.{ price }</h3>
                 </div>
                 <div>
-                    <Link to={ `/PrivateSingleTreatment/${ id }` }><Button className="btn btn-primary">Details</Button></Link>
+                    <Link to={ `/treatment/${ id }` }><Button className="btn btn-primary">Details</Button></Link>
                 </div>
             </div>
         </Col>

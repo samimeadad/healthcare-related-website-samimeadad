@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const PrivateSingleTreatment = () => {
-    const { serviceId } = useParams();
+const PrivateSingleTreatment = ( props ) => {
+    const { treatmentId } = useParams();
     return (
         <div>
-            <h2>This is Booking No.: { serviceId }</h2>
+            <h2>This is Booking No.: { treatmentId }</h2>
         </div>
     );
 };

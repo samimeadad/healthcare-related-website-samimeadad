@@ -8,6 +8,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const Header = () => {
     const { user, logout } = useAuth();
+    console.log( user );
 
     return (
         <header className="header">
@@ -46,7 +47,7 @@ const Header = () => {
                     {/* login and signup section */ }
                     <Nav className="p-3">
                         {
-                            !user?.email ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :
+                            !user.email ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :
                                 <button className="btn btn-info border border-danger me-2" onClick={ logout }>Log Out <span className="fw-bold text-danger">{ user?.email }</span></button>
                         }
                     </Nav>

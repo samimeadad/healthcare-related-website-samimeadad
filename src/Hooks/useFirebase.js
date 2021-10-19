@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
 import initializeFirebaseAuthentication from '../Firebase/firebase.init';
 
 initializeFirebaseAuthentication();
@@ -26,9 +26,22 @@ const useFirebase = () => {
 
     const verifyEmail = () => {
         sendEmailVerification( auth.currentUser )
-            .then( result => {
-                console.log( result );
+            .then( () => {
+                setUser( user );
             } )
+            .catch( error => {
+                setError( error );
+            } );
+    }
+
+    const setUserName = () => {
+        updateProfile( auth.currentUser, { displayName: "Sami Meadad Choudhury" } )
+            .then( () => {
+                setUser( user );
+            } )
+            .catch( error => {
+                setError( error );
+            } );
     }
 
     const registerNewUser = ( email, password ) => {
@@ -37,6 +50,7 @@ const useFirebase = () => {
                 setUser( result.user );
                 setError( 'Yeah! User Registered' );
                 verifyEmail();
+                setUserName();
             } )
             .catch( error => {
                 setError( error.message );
@@ -56,7 +70,7 @@ const useFirebase = () => {
 
     const processPasswordReset = ( email ) => {
         sendPasswordResetEmail( auth, email )
-            .then( result => {
+            .then( () => {
                 setError( 'Password reset mail sent' );
             } )
             .catch( error => {
@@ -95,6 +109,7 @@ const useFirebase = () => {
         registerNewUser,
         processLogin,
         processPasswordReset,
+        setUserName,
         logout,
         isLoading
     }

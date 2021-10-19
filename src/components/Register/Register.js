@@ -10,6 +10,7 @@ const Register = () => {
     const [ password, setPassword ] = useState( '' );
     const [ errMessage, setErrMessage ] = useState( '' );
 
+
     const emailInputFieldChange = e => {
         setEmail( e.target.value );
     }
@@ -51,7 +52,7 @@ const Register = () => {
 
                             <div className="row mb-3">
                                 <div className="col-sm-12">
-                                    <input onBlur={ emailInputFieldChange } type="email" className="form-control" id="inputEmail3" placeholder="Email" required />
+                                    <input onBlur={ emailInputFieldChange } type="email" className="form-control" id="inputEmail3" placeholder="Your Email" required />
                                 </div>
                             </div>
                             <div className="row mb-3">
