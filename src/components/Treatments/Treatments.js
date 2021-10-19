@@ -6,7 +6,7 @@ import Treatment from '../Treatment/Treatment'
 const Treatments = () => {
     const [ treatments ] = useTreatments();
     return (
-        <Row className="container mx-auto">
+        <Row className="container mx-auto my-5">
             <h2 className="mt-5 text-center fw-bold">Our Services</h2>
             <Row className="g-4">
                 {
@@ -16,6 +16,7 @@ const Treatments = () => {
                     </Treatment> )
                 }
             </Row>
+            <hr className="mx-2 my-5 text-info" />
         </Row >
     );
 };

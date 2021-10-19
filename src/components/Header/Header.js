@@ -4,8 +4,11 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import useAuth from '../../Hooks/useAuth';
 
 const Header = () => {
+    const { user, logout } = useAuth();
+
     return (
         <header className="header">
             <Navbar collapseOnSelect expand="lg" className="nav navbar px-3" bg="info" variant="dark">
@@ -42,7 +45,10 @@ const Header = () => {
 
                     {/* login and signup section */ }
                     <Nav className="p-3">
-                        <NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink>
+                        {
+                            !user.email ? <NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink> :
+                                <span><button className="btn btn-primary me-2" onClick={ logout }>Log Out <span className="fw-bold">{ user.displayName }</span></button></span>
+                        }
                         <NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink>
                     </Nav>
                 </Navbar.Collapse>
