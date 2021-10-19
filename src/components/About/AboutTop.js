@@ -6,7 +6,7 @@ const AboutTop = () => {
     return (
         <div>
             <Row className="mt-5 mx-auto w-75">
-                <Col xs={ 12 } md={ 7 }>
+                <Col xs={ 12 } sm={ 12 } md={ 7 } lg={ 7 }>
                     <div className="mt-5">
                         <h2 className="text-warning mb-3 fw-bold">DreamBaby Fertility Center</h2>
                         <h2 className="text-info mb-3 fw-bold">The Best Fertility Center in Bangladesh</h2>
@@ -25,7 +25,7 @@ const AboutTop = () => {
                         </p>
                     </div>
                 </Col>
-                <Col xs={ 12 } md={ 5 }>
+                <Col xs={ 12 } sm={ 12 } md={ 5 } lg={ 5 }>
                     <img className="img-fluid rounded-3 mt-5" src={ aboutImage } alt="bannerImage" />
                 </Col>
             </Row>

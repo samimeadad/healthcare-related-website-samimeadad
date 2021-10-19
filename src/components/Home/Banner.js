@@ -7,7 +7,7 @@ const Banner = () => {
         <div>
             <header className='m-5'>
                 <Row>
-                    <Col xs={ 12 } md={ 4 }>
+                    <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 }>
                         <div className="mt-5 pt-5 px-3 rounded-3">
                             <h2 className="text-warning mb-3 fw-bold">World Record</h2>
                             <hr className="text-danger" />
@@ -16,10 +16,10 @@ const Banner = () => {
                             <hr className="text-danger" />
                         </div>
                     </Col>
-                    <Col xs={ 12 } md={ 5 }>
+                    <Col xs={ 12 } sm={ 12 } md={ 5 } lg={ 5 }>
                         <img className="img-fluid rounded-3" src={ bannerImage } alt="bannerImage" />
                     </Col>
-                    <Col xs={ 12 } md={ 3 }>
+                    <Col xs={ 12 } sm={ 12 } md={ 3 } lg={ 3 }>
                         <div className="mt-4 px-5 text-start rounded-3">
                             <Form>
                                 <h3 className="text-info fw-bold">Book An Appointment</h3>

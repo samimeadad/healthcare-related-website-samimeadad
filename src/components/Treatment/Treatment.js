@@ -6,7 +6,7 @@ const Treatment = ( props ) => {
     const { name, specialist, description, price, image } = props.treatment;
     return (
         // div for each column
-        <Col sm={ 12 } md={ 4 }>
+        <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 }>
             {/* card for each Treatment Service*/ }
             <div className="card h-100 p-3 rounded-3 text-center">
                 <img src={ image } className="card-img-top img-fluid" alt="..." />

@@ -7,10 +7,10 @@ const AboutUs = () => {
         <div>
             <Row className="m-5">
                 <h2 className="text-center text-info fw-bold mb-5">About Us – DreamBaby Fertility Center</h2>
-                <Col xs={ 12 } md={ 5 }>
+                <Col xs={ 12 } sm={ 12 } md={ 5 } lg={ 5 }>
                     <img className="img-fluid rounded-3" src={ aboutImage2 } alt="bannerImage" />
                 </Col>
-                <Col xs={ 12 } md={ 7 }>
+                <Col xs={ 12 } sm={ 12 } md={ 7 } lg={ 7 }>
                     <div className="ms-5">
                         <p>
                             DreamBaby Fertility Center is one of the best fertility centers in Bangladesh founded and managed by Dr. Tasnuva Kawsar the renowned Embryologist and fertility specialist. Bangladesh Fertility was founded in the year 2010 by Dr. Tasnuva Kawsar after the realization of the need for quality fertility care and specialization in solving the issues couples faced with respect to infertility.

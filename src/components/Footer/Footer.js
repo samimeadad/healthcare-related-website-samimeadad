@@ -16,13 +16,13 @@ const Footer = () => {
             </div>
             <div className="container">
                 <Row>
-                    <Col xs={ 12 } md={ 4 }>
+                    <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 }>
                         <h3 className="text-danger mb-5 fw-bold text-center">About DreamBaby</h3>
                         <p className="text-justify text-dark ms-3">Our Clinic has grown to provide a world class facility for the advanced infertility treatment.</p>
                         <p className="text-justify text-dark ms-3">We are among the most qualified implant providers in Bangladesh with over 30 years of quality treatment and experience.</p>
                     </Col>
 
-                    <Col xs={ 12 } md={ 4 } className="text-center">
+                    <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 } className="text-center">
                         <h3 className="text-danger mb-5 fw-bold">Our Locations</h3>
                         <p>
                             <span>Dhaka</span>
@@ -39,7 +39,7 @@ const Footer = () => {
                         </p>
                     </Col>
 
-                    <Col xs={ 12 } md={ 4 } className="text-center">
+                    <Col xs={ 12 } sm={ 12 } md={ 4 } lg={ 4 } className="text-center">
                         <h3 className="text-danger mb-5 fw-bold">Our Services</h3>
                         <p>
                             <span>Azoospermia</span>
