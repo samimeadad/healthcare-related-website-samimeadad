@@ -51,6 +51,16 @@ const useFirebase = () => {
             } );
     }
 
+    const processPasswordReset = ( email ) => {
+        sendPasswordResetEmail( auth, email )
+            .then( result => {
+                setError( 'Password reset mail sent' );
+            } )
+            .catch( error => {
+                setError( error.message )
+            } );
+    }
+
     const logout = () => {
         signOut( auth ).then( () => {
             setUser( {} );
@@ -75,6 +85,7 @@ const useFirebase = () => {
         signInUsingGoogle,
         registerNewUser,
         processLogin,
+        processPasswordReset,
         logout
     }
 }

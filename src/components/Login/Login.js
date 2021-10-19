@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import loginImage from '../../images/login.jpg';
-import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import useAuth from '../../Hooks/useAuth';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    const { signInUsingGoogle, processLogin } = useAuth();
-    const auth = getAuth();
+    const { signInUsingGoogle, processLogin, processPasswordReset, error } = useAuth();
     const [ email, setEmail ] = useState( '' );
     const [ password, setPassword ] = useState( '' );
-    const [ error, setError ] = useState( '' );
-    const [ isLogin, setIsLogin ] = useState( false );
-    const [ user, setUser ] = useState( {} );
+    const [ errMessage, setErrMessage ] = useState( '' );
 
     const emailInputFieldChange = e => {
         setEmail( e.target.value );
@@ -25,31 +21,30 @@ const Login = () => {
     const handleUserLogin = e => {
         e.preventDefault();
         if ( !email ) {
-            setError( 'Please input a valid email!' );
+            setErrMessage( 'Please input a valid email!' );
             return;
         }
         else if ( !password ) {
-            setError( 'Please input your password' );
+            setErrMessage( 'Please input your password' );
         }
         else if ( password.length < 6 ) {
-            setError( 'Password must be at least 6 characters long' );
+            setErrMessage( 'Password must be at least 6 characters long' );
             return;
         }
 
         else {
             processLogin( email, password );
+            setErrMessage( 'Yeah! User Logged In!' )
         }
     }
 
     const handleResetPassword = () => {
         if ( !email ) {
-            setError( 'Please input a valid email' );
+            setErrMessage( 'Please input a valid email' );
         }
         else {
-            sendPasswordResetEmail( auth, email )
-                .then( result => {
-                    setError( 'Password reset mail sent' );
-                } )
+            processPasswordReset( email );
+            setErrMessage( 'Mail sent for reset password!' )
         }
     }
 
@@ -58,7 +53,7 @@ const Login = () => {
             <Row className="text-center">
                 <Col xs={ 12 } sm={ 12 } md={ 6 } lg={ 6 }>
                     <div className="container mt-5">
-                        <form onSubmit={ handleLogin }>
+                        <form onSubmit={ handleUserLogin }>
                             <h3 className="text-primary fw-bold">Please Login</h3>
 
                             <div className="row mb-3">
@@ -78,7 +73,9 @@ const Login = () => {
                         <button onClick={ signInUsingGoogle } className="my-3 btn btn-success"> Login With Google</button>
                         <hr className="text-danger" />
                         <p className="my-3"><Link to="/register" className="btn btn-danger">New User?</Link></p>
-                        <div className="row mt-3 text-danger">{ error }</div>
+                        {
+                            !error ? <div className="row mt-3 text-danger">{ errMessage }</div> : <div className="row mt-3 text-danger">{ error }</div>
+                        }
                     </div>
                 </Col>
                 <Col xs={ 12 } sm={ 12 } md={ 6 } lg={ 6 }>

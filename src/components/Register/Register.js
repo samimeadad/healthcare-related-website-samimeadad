@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-    const { registerNewUser, signInUsingGoogle } = useAuth();
+    const { registerNewUser, signInUsingGoogle, error } = useAuth();
     const [ email, setEmail ] = useState( '' );
     const [ password, setPassword ] = useState( '' );
-    const [ error, setError ] = useState( '' );
+    const [ errMessage, setErrMessage ] = useState( '' );
 
     const emailInputFieldChange = e => {
         setEmail( e.target.value );
@@ -21,19 +21,20 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
         if ( !email ) {
-            setError( 'Please input a valid email!' );
+            setErrMessage( 'Please input a valid email!' );
             return;
         }
         else if ( !password ) {
-            setError( 'Please input your password' );
+            setErrMessage( 'Please input your password' );
         }
         else if ( password.length < 6 ) {
-            setError( 'Password must be at least 6 characters long' );
+            setErrMessage( 'Password must be at least 6 characters long' );
             return;
         }
 
         else {
             registerNewUser( email, password );
+            setErrMessage( 'Yeah! New User Registered!' );
         }
     }
 
@@ -64,7 +65,9 @@ const Register = () => {
                         <button onClick={ signInUsingGoogle } className="my-3 btn btn-success"> Register With Google</button>
                         <hr className="text-danger" />
                         <p className="my-3"><Link to="/login" className="btn btn-primary">Already Registered?</Link></p>
-                        <div className="row mt-3 text-danger">{ error }</div>
+                        {
+                            !error ? <div className="row mt-3 text-danger">{ errMessage }</div> : <div className="row mt-3 text-danger">{ error }</div>
+                        }
                     </div>
                 </Col>
             </Row>
