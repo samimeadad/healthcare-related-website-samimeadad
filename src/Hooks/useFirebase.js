@@ -2,16 +2,22 @@ import { useEffect, useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import initializeFirebaseAuthentication from '../Firebase/firebase.init';
 
+//initialize the firebase configuration for authentication
 initializeFirebaseAuthentication();
 
+//Main hook for firebase authentication
 const useFirebase = () => {
+    //state variable for user, error and data loading progress
     const [ user, setUser ] = useState( {} );
     const [ error, setError ] = useState( '' );
     const [ isLoading, setIsLoading ] = useState( true );
 
+    //get the authentication token
     const auth = getAuth();
+    //google auth provider object for google authentication
     const googleProvider = new GoogleAuthProvider();
 
+    //function for google sign-in
     const signInUsingGoogle = () => {
         setIsLoading( true );
         signInWithPopup( auth, googleProvider )
@@ -24,6 +30,7 @@ const useFirebase = () => {
             .finally( () => setIsLoading( false ) );
     }
 
+    //function for email verification
     const verifyEmail = () => {
         sendEmailVerification( auth.currentUser )
             .then( () => {
@@ -34,6 +41,7 @@ const useFirebase = () => {
             } );
     }
 
+    //function for sign-up a new user with email and password
     const registerNewUser = ( email, password ) => {
         createUserWithEmailAndPassword( auth, email, password )
             .then( result => {
@@ -46,6 +54,7 @@ const useFirebase = () => {
             } );
     }
 
+    //function for process login with email and password
     const processLogin = ( email, password ) => {
         signInWithEmailAndPassword( auth, email, password )
             .then( result => {
@@ -57,6 +66,7 @@ const useFirebase = () => {
             } );
     }
 
+    //function for password reset
     const processPasswordReset = ( email ) => {
         sendPasswordResetEmail( auth, email )
             .then( () => {
@@ -67,8 +77,9 @@ const useFirebase = () => {
             } );
     }
 
+    //Set the observer on auth object to get the current user status on real-time
     useEffect( () => {
-        onAuthStateChanged( auth, user => {
+        const unsubscribe = onAuthStateChanged( auth, user => {
             if ( user ) {
                 setUser( user );
             }
@@ -77,8 +88,11 @@ const useFirebase = () => {
             }
             setIsLoading( false );
         } );
+        return () => unsubscribe();
     }, [ auth ] );
 
+
+    //function for logout
     const logout = () => {
         setIsLoading( true );
         signOut( auth ).then( () => {
@@ -91,6 +105,7 @@ const useFirebase = () => {
             .finally( () => setIsLoading( false ) );
     }
 
+    //return all the necessary variables and function for further use
     return {
         user,
         error,

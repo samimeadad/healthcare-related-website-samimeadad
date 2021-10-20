@@ -2,6 +2,8 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import aboutImage2 from '../../images/aboutImage2.png';
 
+
+//about us section of about page
 const AboutUs = () => {
     return (
         <div>

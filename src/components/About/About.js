@@ -2,6 +2,7 @@ import React from 'react';
 import AboutTop from './AboutTop';
 import AboutUs from './AboutUs';
 
+//component for about page
 const About = () => {
     return (
         <div className="m-5">

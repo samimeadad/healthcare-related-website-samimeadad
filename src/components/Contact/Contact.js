@@ -1,6 +1,7 @@
 import React from 'react';
 import Location from './Location';
 
+//component for contact us page
 const Contact = () => {
     return (
         <div>

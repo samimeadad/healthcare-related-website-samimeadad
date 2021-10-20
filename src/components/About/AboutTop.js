@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import aboutImage from '../../images/aboutImage.png';
 
+//top section of the about page
 const AboutTop = () => {
     return (
         <div>
