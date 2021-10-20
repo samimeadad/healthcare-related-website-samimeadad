@@ -2,6 +2,7 @@ import React from 'react';
 import { Badge, Button, Col, Form, FormControl, Row } from 'react-bootstrap';
 import bannerImage from '../../images/bannerImage.png';
 
+//component for banner section
 const Banner = () => {
     return (
         <div>

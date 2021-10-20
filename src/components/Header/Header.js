@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../Hooks/useAuth';
 
+//component for header/navbar
 const Header = () => {
     const { user, logout } = useAuth();
     return (
@@ -23,14 +24,14 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     {/* menu bar and primary route button */ }
                     <Nav className="me-auto">
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/home"><FontAwesomeIcon icon={ faHome } /></NavLink>
+                        <NavLink className="me-3 text-danger text-decoration-none" to="/home"><FontAwesomeIcon icon={ faHome } /></NavLink>
                         <NavLink className="me-3 text-dark text-decoration-none" to="/about">About Us</NavLink>
                         <NavLink className="me-3 text-dark text-decoration-none" to="/treatments">Treatments Option</NavLink>
-                        <NavLink className="me-3 text-dark text-decoration-none" to="/doctors">Doctors</NavLink>
+                        <NavLink className="me-3 text-dark text-decoration-none" to="/doctors">Specialists</NavLink>
                         <NavLink className="me-3 text-dark text-decoration-none" to="/contact">Contact Us</NavLink>
                     </Nav>
 
-                    {/* dropdown category menu */ }
+                    {/* dropdown department menu */ }
                     <Nav className="me-3 text-dark text-decoration-none">
                         <NavDropdown title={ <span className="text-dark">Departments</span> } id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Infertility</NavDropdown.Item>
@@ -42,7 +43,7 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
 
-                    {/* login and signup section */ }
+                    {/* login and signup section with conditional rendering*/ }
                     <Nav className="p-3">
                         {
                             !user.email ? <span><NavLink className="me-3 text-danger text-decoration-none fw-bold" to="/login">Login</NavLink><NavLink className="text-danger text-decoration-none fw-bold" to="/register">Sign-Up</NavLink></span> :

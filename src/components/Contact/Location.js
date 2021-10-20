@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 
+
+//component for location section
 const Location = () => {
     return (
         <div className="container mx-auto my-5">

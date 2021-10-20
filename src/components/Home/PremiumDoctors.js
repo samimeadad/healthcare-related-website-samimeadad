@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap';
 import useDoctors from '../../Hooks/useDoctors';
 import Doctor from '../Doctor/Doctor';
 
+//component for premium doctors section
 const PremiumDoctors = () => {
     const [ doctors ] = useDoctors();
     const premiumDoctors = doctors.filter( doctor => doctor.premium === true );

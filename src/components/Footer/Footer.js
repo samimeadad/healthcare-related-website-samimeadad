@@ -3,6 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
+//component for footer
 const Footer = () => {
     return (
         <footer className="bg-info pb-3">

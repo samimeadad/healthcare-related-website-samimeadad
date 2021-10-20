@@ -4,6 +4,7 @@ import registerImage from '../../images/register.jpg';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
+//component for register/sign-up page
 const Register = () => {
     const { registerNewUser, signInUsingGoogle, error } = useAuth();
     const [ email, setEmail ] = useState( '' );
@@ -11,19 +12,23 @@ const Register = () => {
     const [ errMessage, setErrMessage ] = useState( '' );
 
 
+    //set the email input value to the state variable
     const emailInputFieldChange = e => {
         setEmail( e.target.value );
     }
 
+    //set the password input value to the state variable
     const passwordInputFieldChange = e => {
         setPassword( e.target.value );
     }
 
+    //validate the email
     const validateEmail = () => {
         const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return validEmail.test( email );
     }
 
+    //function for register/sign-up operation
     const handleRegister = e => {
         e.preventDefault();
         if ( !email || !validateEmail() ) {
@@ -44,6 +49,7 @@ const Register = () => {
         }
     }
 
+    //rendering on the UI
     return (
         <div className="container mx-auto my-5">
             <Row className="text-center">

@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap';
 import useTreatments from '../../Hooks/useTreatments';
 import Treatment from '../Treatment/Treatment';
 
+//component for treatment page rendering
 const Treatments = () => {
     const [ treatments ] = useTreatments();
 

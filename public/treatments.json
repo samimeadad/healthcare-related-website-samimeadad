@@ -38,7 +38,7 @@
     {
         "id": "105",
         "name": "Semen Analysis & Sperm Analysis",
-        "specialist": "Dr. GAUTAM. B. HANJI",
+        "specialist": "Dr. K. Hari Prasad",
         "description": "For a semen analysis, a fresh semen sample, not more than half an hour old is needed, after sexual abstinence for at least 3 to 4 days. The man masturbates into a clean, wide mouthed bottle which is then delivered to the laboratory.",
         "price": 8000,
         "premium": false,
@@ -47,7 +47,7 @@
     {
         "id": "106",
         "name": "Sperm Bank",
-        "specialist": "Dr. Tasnuva Kawsar",
+        "specialist": "Dr. K. Hari Prasad",
         "description": "The procedure by which a man donates his semen – the fluid that is released during ejaculation which contains sperms is called sperm donation. The donated sperms help an individual or a couple conceive a baby.",
         "price": 3000,
         "premium": false,

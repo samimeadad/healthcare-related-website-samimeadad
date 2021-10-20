@@ -14,6 +14,7 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PrivateSingleTreatment from './components/Treatment/PrivateSingleTreatment';
 
+//All public and private routes (Doctors and Single Treatments both are private route here)
 function App () {
   return (
     <div>

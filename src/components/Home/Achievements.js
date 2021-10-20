@@ -5,6 +5,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 import { faBaby } from '@fortawesome/free-solid-svg-icons';
 
+//component for achievement section
 const Achievements = () => {
     return (
         <section className="text-center bg-dark text-info p-5 mx-5">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col } from 'react-bootstrap';
 
+//component for specialist card rendering on UI
 const Doctor = ( props ) => {
     const { name, degree, designation, image } = props.doctor;
     return (

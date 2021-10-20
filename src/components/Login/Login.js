@@ -4,25 +4,30 @@ import loginImage from '../../images/login.jpg';
 import useAuth from '../../Hooks/useAuth';
 import { Link } from 'react-router-dom';
 
+//component for login section
 const Login = () => {
     const { signInUsingGoogle, processLogin, processPasswordReset, error } = useAuth();
     const [ email, setEmail ] = useState( '' );
     const [ password, setPassword ] = useState( '' );
     const [ errMessage, setErrMessage ] = useState( '' );
 
+    //set the email input value to the state variable
     const emailInputFieldChange = e => {
         setEmail( e.target.value );
     }
 
+    //set the password input value to the state variable
     const passwordInputFieldChange = e => {
         setPassword( e.target.value );
     }
 
+    //function for validate the email
     const validateEmail = () => {
         const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return validEmail.test( email );
     }
 
+    //function for user login with email and password
     const handleUserLogin = e => {
         e.preventDefault();
         if ( !email || !validateEmail() ) {
@@ -43,6 +48,7 @@ const Login = () => {
         }
     }
 
+    //function for reset password
     const handleResetPassword = () => {
         if ( !email ) {
             setErrMessage( 'Please input a valid email' );
@@ -53,6 +59,7 @@ const Login = () => {
         }
     }
 
+    //UI rendering
     return (
         <div className="container mx-auto my-5">
             <Row className="text-center">
@@ -78,6 +85,7 @@ const Login = () => {
                         <button onClick={ signInUsingGoogle } className="my-3 btn btn-success"> Login With Google</button>
                         <hr className="text-danger" />
                         <p className="my-3"><Link to="/register" className="btn btn-danger">New User?</Link></p>
+                        {/* render the messages on the UI conditionally */ }
                         {
                             !error ? <div className="row mt-3 text-danger">{ errMessage }</div> : <div className="row mt-3 text-danger">{ error }</div>
                         }

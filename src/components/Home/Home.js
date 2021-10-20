@@ -5,6 +5,7 @@ import Banner from './Banner';
 import PremiumDoctors from './PremiumDoctors';
 import PremiumTreatments from './PremiumTreatments';
 
+//component for home page
 const Home = () => {
     return (
         <div>

@@ -4,17 +4,20 @@ import useTreatments from '../../Hooks/useTreatments';
 
 
 const PrivateSingleTreatment = () => {
+    //destructure the route parameter from the Route in App.js
     const { treatmentId } = useParams();
+    //destructuring the state variable from useTreatment hook to get API data from fake API
     const [ treatments ] = useTreatments();
 
+    //search the required treatment element as per ID search
     const privateTreatment = ( treatments.find( treatment => treatmentId === treatment.id ) );
 
+    //history hook for Go Back button
     const history = useHistory();
 
     return (
-
         <div className="container my-5 bg-info">
-            <h1 className="text-dark my-3 p-3"><span className="text-danger">{ privateTreatment?.name }</span> Treatment Overview in Details</h1>
+            <h1 className="text-dark my-3 p-3"><span className="text-danger fw-bold">{ privateTreatment?.name }</span> Treatment Overview in Details</h1>
             <Card className="px-5 py-2">
                 <Card.Img variant="top" src={ privateTreatment?.image } className="img-fluid" style={ { width: '400px' } } />
                 <Card.Body>
@@ -29,10 +32,8 @@ const PrivateSingleTreatment = () => {
                         <hr className="text-secondary" />
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer>
-                    <small><Button onClick={ () => history.goBack() }>Go Back</Button></small>
-                    <br />
-                    <small className="text-muted">Please contact our clinic for the procedure. Thank you for visiting us.</small>
+                <Card.Footer className="d-flex justify-content-between">
+                    <Button className="btn btn-danger" onClick={ () => history.goBack() }>Go Back</Button>
                 </Card.Footer>
             </Card>
 

@@ -3,6 +3,7 @@ import useDoctors from '../../Hooks/useDoctors';
 import { Row } from 'react-bootstrap';
 import Doctor from '../Doctor/Doctor';
 
+//component for specialists page
 const Doctors = () => {
     const [ doctors ] = useDoctors();
     return (

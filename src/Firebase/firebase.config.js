@@ -1,3 +1,4 @@
+//firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDRnhhJPhDA51xFYudONeOh1D5mU-J_yRs",
     authDomain: "healthcare-website-samimeadad.firebaseapp.com",

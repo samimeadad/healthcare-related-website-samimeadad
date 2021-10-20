@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// custom hook for teachers api call
+// custom hook for specialists api call
 const useDoctors = () => {
     const [ doctors, setDoctors ] = useState( [] );
 
@@ -10,7 +10,7 @@ const useDoctors = () => {
             .then( data => setDoctors( data ) );
     }, [] );
 
-    //return teachers state variable and setTeachers function
+    //return doctors/specialists state variable and setDoctors function
     return [ doctors, setDoctors ];
 }
 

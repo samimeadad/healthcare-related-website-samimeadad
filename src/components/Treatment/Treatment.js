@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-// component for Treatments to be displayed on the Treatment page
+// component for Treatment card to be displayed on the Treatment page
 const Treatment = ( props ) => {
     const { id, name, specialist, description, price, image } = props.treatment;
     return (

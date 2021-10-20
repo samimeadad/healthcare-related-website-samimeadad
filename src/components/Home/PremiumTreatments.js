@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap';
 import useTreatments from '../../Hooks/useTreatments';
 import Treatment from '../Treatment/Treatment';
 
+//component for premium treatment section
 const PremiumTreatments = () => {
     const [ treatments ] = useTreatments();
     const premiumTreatments = treatments.filter( treatment => treatment.premium === true );

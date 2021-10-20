@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
+//component for angels of the month section/carousel
 const Angels = () => {
     return (
         <div className="container w-25 mx-auto my-5">
