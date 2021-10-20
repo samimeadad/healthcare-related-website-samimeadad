@@ -22,6 +22,7 @@ const useFirebase = () => {
         setIsLoading( true );
         signInWithPopup( auth, googleProvider )
             .then( result => {
+                setError( '' );
                 setUser( result.user );
             } )
             .catch( error => {
@@ -54,18 +55,6 @@ const useFirebase = () => {
             } );
     }
 
-    //function for process login with email and password
-    const processLogin = ( email, password ) => {
-        signInWithEmailAndPassword( auth, email, password )
-            .then( result => {
-                setError( '' );
-                setUser( result.user );
-            } )
-            .catch( error => {
-                setError( error.message );
-            } );
-    }
-
     //function for password reset
     const processPasswordReset = ( email ) => {
         sendPasswordResetEmail( auth, email )
@@ -75,6 +64,20 @@ const useFirebase = () => {
             .catch( error => {
                 setError( error.message )
             } );
+    }
+
+    //function for process login with email and password
+    const processLogin = ( email, password ) => {
+        setIsLoading( true );
+        signInWithEmailAndPassword( auth, email, password )
+            .then( result => {
+                setError( '' );
+                setUser( result.user );
+            } )
+            .catch( error => {
+                setError( error.message );
+            } )
+            .finally( () => setIsLoading( false ) );
     }
 
     //Set the observer on auth object to get the current user status on real-time

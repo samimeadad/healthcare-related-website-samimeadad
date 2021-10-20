@@ -1,12 +1,15 @@
-import { Card } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import { Button, Card } from 'react-bootstrap';
+import { useHistory, useParams } from 'react-router';
 import useTreatments from '../../Hooks/useTreatments';
+
 
 const PrivateSingleTreatment = () => {
     const { treatmentId } = useParams();
     const [ treatments ] = useTreatments();
 
     const privateTreatment = ( treatments.find( treatment => treatmentId === treatment.id ) );
+
+    const history = useHistory();
 
     return (
 
@@ -27,11 +30,13 @@ const PrivateSingleTreatment = () => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
+                    <small><Button onClick={ () => history.goBack() }>Go Back</Button></small>
+                    <br />
                     <small className="text-muted">Please contact our clinic for the procedure. Thank you for visiting us.</small>
                 </Card.Footer>
             </Card>
 
-        </div>
+        </div >
     );
 };
 
