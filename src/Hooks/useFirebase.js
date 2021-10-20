@@ -77,7 +77,7 @@ const useFirebase = () => {
             }
             setIsLoading( false );
         } );
-    }, [] );
+    }, [ auth ] );
 
     const logout = () => {
         setIsLoading( true );

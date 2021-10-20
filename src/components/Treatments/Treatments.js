@@ -8,7 +8,7 @@ const Treatments = () => {
 
     return (
         <Row className="container mx-auto my-5">
-            <h2 className="mt-5 text-center fw-bold">Our Services</h2>
+            <h2 className="mt-5 text-center fw-bold">Our Treatments Options</h2>
             <Row className="g-4">
                 {
                     treatments.map( treatment => <Treatment

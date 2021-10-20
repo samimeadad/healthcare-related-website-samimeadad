@@ -7,7 +7,7 @@ const Doctors = () => {
     const [ doctors ] = useDoctors();
     return (
         <Row className="container mx-auto my-5">
-            <h2 className="mt-5 text-center fw-bold">Our Teams</h2>
+            <h2 className="mt-5 text-center fw-bold">Our Specialists</h2>
             <Row className="g-4">
                 {
                     doctors.map( doctor => <Doctor

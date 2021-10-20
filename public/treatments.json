@@ -1,6 +1,6 @@
 [
     {
-        "id": 101,
+        "id": "101",
         "name": "Ovulation Induction",
         "specialist": "Dr. Smisha Sridev",
         "description": "Ovulation induction medications, (fertility drugs), are given to stimulate the follicles in the ovaries, which will result in the production of multiple eggs in a cycle. The medications will help in controlling the time that you release the eggs, ovulating, timely sexual intercourse, intrauterine inseminations and in vitro fertilization procedures can be scheduled at the most likely time to achieve pregnancy.",
@@ -9,7 +9,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/ovulation-cfc.png"
     },
     {
-        "id": 102,
+        "id": "102",
         "name": "In Vitro Fertilization (IVF)",
         "specialist": "Dr. GAUTAM. B. HANJI",
         "description": "IVF is a major treatment for infertility when other methods of assisted reproductive technology have failed. It is a process used to conceive a child outside the body.The women’s egg are collected and a man’s sperm are placed together in a plastic dish for fertilization. After fertilization the resulting embryos are then transferred to the women’s uterus with the intent to establish a successful pregnancy.",
@@ -18,7 +18,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/IVF-ET.png"
     },
     {
-        "id": 103,
+        "id": "103",
         "name": "Intrauterine Insemination ( IUI)",
         "specialist": "Dr. Harshini Jayakumar",
         "description": "Intrauterine Inseminatio (IUI) is a procedure for treating infertility. It is a type of artificial insemination where the sperms are placed in your uterus. Before the placement, the sperms are washed and concentrated and are placed directly in your uterus around the time your ovaries releasing one or more eggs to be fertilized. The older types of artificial insemination placed the sperm in your vagina. Though this was easier, it was not as successful as the current methods.",
@@ -27,7 +27,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/IUI-husband-donor.png"
     },
     {
-        "id": 104,
+        "id": "104",
         "name": "Intracytoplasmic sperm injection (ICSI)",
         "specialist": "Dr. Chitra Ramanathan",
         "description": "Intracytoplasmic sperm injection (ICSI) involves the injection of sperm into eggs directly. The egg is obtained from in vitro fertilization (IVF). ICSI can be recommended when there is a reason to suspect that achieving fertilization can be difficult. ICSI is used more often with couples dealing with male infertility factors. Male infertility factors can include one of the following factors: low sperm count, poor sperm motility or movement, poor sperm quality, spermatozoa that do not have the ability to penetrate an egg or azoospermia.",
@@ -36,7 +36,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/icsi.png"
     },
     {
-        "id": 105,
+        "id": "105",
         "name": "Semen Analysis & Sperm Analysis",
         "specialist": "Dr. GAUTAM. B. HANJI",
         "description": "For a semen analysis, a fresh semen sample, not more than half an hour old is needed, after sexual abstinence for at least 3 to 4 days. The man masturbates into a clean, wide mouthed bottle which is then delivered to the laboratory.",
@@ -45,7 +45,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/semen-analysis-sperm-analysis.png"
     },
     {
-        "id": 106,
+        "id": "106",
         "name": "Sperm Bank",
         "specialist": "Dr. Tasnuva Kawsar",
         "description": "The procedure by which a man donates his semen – the fluid that is released during ejaculation which contains sperms is called sperm donation. The donated sperms help an individual or a couple conceive a baby.",
@@ -54,7 +54,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/sperm-bank.png"
     },
     {
-        "id": 107,
+        "id": "107",
         "name": "Laparoscopy",
         "specialist": "Dr. Chitra Ramanathan",
         "description": "Laparoscopy is the minimally invasive diagnostic procedure that includes insertion of narrowtelescope camera system to view the abdominal and reproductive organs such as uterus, fallopian tubes, and ovaries. The fertility expert makes little hole approximately 0.5 to 1 cm in the abdomen, through which fiber optic tube fitted with camera and light is inserted. Suspicious developments can be biopsied and repairs can be made during laparoscopy.",
@@ -63,7 +63,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/Laparoscopy.png"
     },
     {
-        "id": 108,
+        "id": "108",
         "name": "Sperm DNA Fragmentation Test",
         "specialist": "Dr. Smisha Sridev",
         "description": "A male factor is associated with almost 50% of all cases of infertility. A semen analysis can measure the sperm motility, size, shape and concentration. This has been considered as the golden standard test for determining men’s fertility.",
@@ -72,7 +72,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/sperm-DNA-fragmentation-test.png"
     },
     {
-        "id": 109,
+        "id": "109",
         "name": "Hysteroscopy",
         "specialist": "Dr. Chitra Ramanathan",
         "description": "Hysteroscopy is the process of viewing the inside of uterus along with cervical canal. It is done by hysteroscope, which is a narrow telescope with camera and light at end. It is passed through vagina and cervix which helps in detecting the problems in uterus. The fertility expert view the images sent to monitor to diagnose the problems.",
@@ -81,7 +81,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/hysteroscopy.png"
     },
     {
-        "id": 110,
+        "id": "110",
         "name": "Intracytoplasmic Morphologically Selected Sperm Injection (IMSI)",
         "specialist": "Dr. GAUTAM. B. HANJI",
         "description": "Intracytoplasmic Morphologically Selected Sperm Injection (IMSI) is a modification of the ICSI procedure where sperm tests are inspected under microscope that is better access to evaluate their “morphology”. At a higher force the embryologist can distinguish the defects in the sperm head that would not generally be visible with standard ICSI.",

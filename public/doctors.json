@@ -1,6 +1,6 @@
 [
     {
-        "id": 101,
+        "id": "101",
         "name": "Dr. GAUTAM. B. HANJI",
         "age": 54,
         "degree": "M.B.B.S., D.G.O., DNB",
@@ -9,7 +9,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/Dr-GH.jpg"
     },
     {
-        "id": 102,
+        "id": "102",
         "name": "Dr. Smisha Sridev",
         "age": 38,
         "degree": "M.B.B.S., DGO., DNB, FNB",
@@ -18,7 +18,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/Dr.Smisha-Sridev.jpg"
     },
     {
-        "id": 103,
+        "id": "103",
         "name": "Dr. Chitra Ramanathan",
         "age": 54,
         "degree": "M.B.B.S., MRCOG., CCT(UK)., DFFP",
@@ -27,7 +27,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/chitra.jpg"
     },
     {
-        "id": 104,
+        "id": "104",
         "name": "Dr. Harshini Jayakumar",
         "age": 28,
         "degree": "M.B.B.S",
@@ -36,7 +36,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/Dr.Harshini.jpg"
     },
     {
-        "id": 105,
+        "id": "105",
         "name": "Dr. Hajira Anjum Ara",
         "age": 31,
         "degree": "M.B.B.S., D.G.O., DNB",
@@ -45,7 +45,7 @@
         "image": "https://chennaifertilitycenter.com/assets/images/DR.-HAJIRA.jpg"
     },
     {
-        "id": 106,
+        "id": "106",
         "name": "Dr. K. Hari Prasad",
         "age": 34,
         "degree": "M.B.B.S., MD.",
