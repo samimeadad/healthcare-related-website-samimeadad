@@ -1,6 +1,5 @@
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import useTreatments from '../../Hooks/useTreatments';
 
 const PrivateSingleTreatment = () => {
